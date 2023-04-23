@@ -1,0 +1,48 @@
+
+Spring IOC container is in charge of bean creation, and injecting them
+where its needed,it manages the entire bean lifecycle
+
+To tell ioc container to manage the beans we need three things
+
+1)Declare the beans in project
+2)Describe their dependencies between themselves
+3)Specify the locations, where they can be found---->this is also called scanning the beans
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+BEAN SCOPES
+
+Singleton: Only one instance of bean will be created in container
+every time we erquest a instance of a bean that was previously created, that same bean will be
+delivered and no new instance will be created
+
+note: all service layer bins which are supposed to be immutable are all singleton scoped
+
+
+Prototype:Every time we request an instance of a bean, everytime it will be created in container
+
+Request: for each HTTP request new instance will be created
+
+Session: for each HTTP session, a new instance will
+be created
+
+Application:  creates the bean instances
+for lifecycle of a servletcontext
+
+
+WEBSOCKET
+
+websckt: beans are stored in wbsckt session attributes
+
+its  protocol that is responsible for creating bi directional
+communication between client and host
+
+for chatting apps, websocket is used
+
+As long as communications is happening between client and host,
+that created instance wil be there
+
+for new socket connection new instance will be created
+
+

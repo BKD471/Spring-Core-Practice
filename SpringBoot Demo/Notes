@@ -1,0 +1,44 @@
+Spring boot has 4 features
+
+1)AutoConfiguration
+In Spring framework,we were forced to configure a lot
+like for example configuring dispatcher servlet,view resolver, hibrenate
+jackson,logger,aspect,tomcat...................
+
+In spring boot, we do not need to manually configure everything,its autoconfigured
+we call this autoconfiguration
+
+Devs o springboot has provided pre developed autoconfigured classes for almost everything be it
+web,jpa,aspect,test under a dependency called org.springframework.boot.autoconfigure
+which comes with spring boot project
+
+SB(spring boot) calls this classes based on two cases
+
+1)SB first scans the dependencies resent under the classpath
+2)It then fetches the given configuration from application.properties file
+
+based on first step ,it decides which autoconfiguration class to call
+areey bancho....everything gets auto configured
+
+2)Spring boot starter project
+  to create an web app, we need spring-boot-starter-web ,its collection of many
+  dependencies like spring-boot-starter-tomcat spring-boot-starter-json spring-webmvc
+  which is further a collection of dependencies
+
+  this is just not to bloat the pom with huge dependency list
+
+3)Spring boot devtool
+   it acts like live server , save the changes and changes gets reflected
+
+4)Spring boot profiles
+  we deploy changes in multiple environments, and every env have differnt configs
+  spring profile is just to have mutiple configs setup for different envs
+
+
+SpringBoot Actuator
+
+used to manage and monitor variuos project info
+
+provides various endpoints
+
+1) health, 2) beans-->list of all beams  3)metrics

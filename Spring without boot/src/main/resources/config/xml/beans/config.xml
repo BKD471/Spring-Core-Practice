@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+    <!--this is how to scan packages for bean definition -->
+    <context:component-scan base-package="outsideofyrleague"/>
+    <!-- bean definitions here -->
+
+
+    <!--we will use xml based bean configuration-->
+    <!--declare all of yr beans here-->
+
+    <!-- bean definitions here -->
+    <bean class="config.xml.beans.Address" id="address1">
+        <property name="city" value="Abc city"/>
+        <property name="street" value="Abc street"/>
+    </bean>
+    <bean class="config.xml.beans.Student" id="student1">
+        <property name="name" value="Tatsumaki"/>
+        <property name="age" value="69"/>
+        <property name="address" ref="address1"/>
+        <property name="friends">
+            <list>
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+            </list>
+
+        </property>
+        <!--
+             <property name="someSet" >
+                 <set>
+                     <value>A</value>
+                     <value>B</value>
+                     <value>C</value>
+                 </set>
+             </property> -->
+        <property name="stacks">
+            <map>
+                <entry key="java" value="OOP"></entry>
+                <entry key="JS" value="FP"></entry>
+                <entry key="C" value="POP"></entry>
+            </map>
+        </property>
+    </bean>
+</beans>
