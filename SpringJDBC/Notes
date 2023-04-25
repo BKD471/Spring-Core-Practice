@@ -1,0 +1,16 @@
+JdbcTemplate
+
+Responsible for auto creation of connection and release of connection
+
+handles exception more efficiently with msg
+perform all ops like insertion,deletion updation
+
+To create a db connection we need
+db username,password,driverclassname these all are properties of interface DataSource
+DriverManagerDataSource is the implementation class of DataSource
+
+JdbcTempate class has a property datasource
+pass the obj of implemetaion class of DataSource to this property and
+voila JOB is done
+
+use this jdbctemplate to perform all ops
